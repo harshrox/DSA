@@ -1,3 +1,5 @@
+// This is a code to create two polynomials and display their sum and product.
+
 #include<stdio.h>
 #include<stdlib.h>
 

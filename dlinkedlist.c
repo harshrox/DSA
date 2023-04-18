@@ -1,3 +1,5 @@
+// This is code to create a doubly linked list and perform operations on it.
+
 #include<stdio.h>
 #include<stdlib.h>
 

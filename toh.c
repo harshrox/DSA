@@ -1,3 +1,5 @@
+// This is a code to solve Tower of Hanoi problem.
+
 #include<stdio.h>
 
 void toh(int n,char s,char h,char d){
@@ -12,6 +14,7 @@ void toh(int n,char s,char h,char d){
     }
     
 }
+
 int main(){
     int num;
     printf("Enter a number-");
