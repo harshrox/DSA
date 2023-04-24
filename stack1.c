@@ -1,4 +1,4 @@
-// Stack implementation using array
+// Stack implementation using array (simple version)
 #include<stdio.h>
 
 #define MAX_SIZE 5
@@ -18,7 +18,7 @@ int isFull()
 
 void push(int element)
 {
-    if(isFUll())
+    if(isFull())
     {
         printf("Stack overflow\n");
     }
