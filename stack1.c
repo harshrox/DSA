@@ -11,7 +11,7 @@ int isEmpty()
     return top == -1;
 }
 
-int isFUll()
+int isFull()
 {
     return top == MAX_SIZE-1;
 }
@@ -44,6 +44,7 @@ int pop()
         return popped;
     }
 }
+
 
 void peek()
 {
