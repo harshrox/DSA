@@ -46,52 +46,64 @@ int pop(int stack[])
     }
 }
 
-int main(){
+int main()
+{
     int i=0,len=50,operand1,operand2,result,flag=1;
     char expression[50];
     int *stack = (int *)malloc(len*sizeof(int));
     printf("Enter the expression (use only +,-,*,/ and ^)-");
     scanf("%s",expression);
-    while(expression[i]!='\0'){
-        if(isdigit(expression[i])){
+    while(expression[i]!='\0')
+    {
+        if(isdigit(expression[i]))
+        {
             push(stack,len,(expression[i]-'0'));
         }
-        else{
+        else
+        {
             operand1=pop(stack);
             operand2=pop(stack);
             flag=operand2;
-            if(expression[i]=='+'){
+            if(expression[i]=='+')
+            {
                 result=operand2+operand1;
                 push(stack,len,result);
             }
-            else if(expression[i]=='-'){
+            else if(expression[i]=='-')
+            {
                 result=operand2-operand1;
                 push(stack,len,result);
             }
-            else if(expression[i]=='*'){
+            else if(expression[i]=='*')
+            {
                 result=operand2*operand1;
                 push(stack,len,result);
             }
-            else if(expression[i]=='/'){
+            else if(expression[i]=='/')
+            {
                 result=operand2/operand1;
                 push(stack,len,result);    
             }
-            else if(expression[i]=='^'){
+            else if(expression[i]=='^')
+            {
                 result=pow(operand2,operand1);
                 push(stack,len,result);    
             }
-            else{
+            else
+            {
                 flag=0;
                 break;
             }
         }
         i++;
     }
-    if(flag==0){
+    if(!flag)
+    {
         printf("Incorrect expression\n");
         printf("Process terminated\n");
     }
-    else{
+    else
+    {
         printf("Result: %d",pop(stack));
     }
     

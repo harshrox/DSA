@@ -13,8 +13,11 @@ int isEmpty(){
     return top==NULL;
 }
 
-void push(int element){
+void push(){
 
+    int element;
+    printf("Enter the element to push-");
+    scanf("%d",&element);
     struct node *newnode;
     newnode=(struct node *)malloc(sizeof(struct node));
     if(top==NULL){
@@ -65,16 +68,46 @@ void display()
 
 
 int main(){
-    push(5);
-    push(3);
-    push(8);
-    display();
-    printf("\n");
-    printf("\n");
-    printf("%d\n",pop());
-    printf("%d\n",pop());
-    printf("%d\n",pop());
-    printf("%d\n",pop());
-    display();
+    int ch;
+    char choice='n';
+    do
+    {
+        
+        printf("\nWhich operation do you want to perform-");
+        printf("\n1 to push");
+        printf("\n2 to pop");
+        printf("\n3 to check if the stack is empty");
+        printf("\n4 to display the stack");
+        printf("\n5 to exit");
+        printf("\n");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1:
+                printf("\n");
+                push();
+                break;
+            case 2:
+                printf("\n");
+                pop();
+                break;
+            case 3:
+                printf("\n");
+                printf("%d",isEmpty());
+                break;
+            case 4:
+                printf("\n");
+                display();
+                break;
+            case 5:
+                choice='y';
+                break;
+            default:
+                printf("\n");
+                printf("Wrong Input");
+                break;
+        }
+        
+    } while (choice=='n' || choice=='N');
     return 0;
 }

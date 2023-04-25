@@ -48,19 +48,6 @@ int pop(int stack[])
 }
 
 
-void peek(int stack[])
-{
-    if(isEmpty())
-    {
-        printf("Stack is empty\n");
-        
-    }
-    else
-    {
-        printf("Peeked value- %d\n",stack[top]);
-    }
-}
-
 void display(int stack[])
 {
     if(isEmpty())
@@ -96,9 +83,8 @@ int main()
         printf("\n2 to pop");
         printf("\n3 to check if the stack is full");
         printf("\n4 to check if the stack is empty");
-        printf("\n5 to check the topmost element");
-        printf("\n6 to display the stack");
-        printf("\n7 to exit");
+        printf("\n5 to display the stack");
+        printf("\n6 to exit");
         printf("\n");
         scanf("%d",&ch);
         switch(ch)
@@ -121,13 +107,9 @@ int main()
                 break;
             case 5:
                 printf("\n");
-                peek(stack);
-                break;
-            case 6:
-                printf("\n");
                 display(stack);
                 break;
-            case 7:
+            case 6:
                 choice='y';
                 break;
             default:
