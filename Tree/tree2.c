@@ -1,4 +1,5 @@
-// Binary Tree
+// Iterative approach of BST
+
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -53,17 +54,50 @@ int main()
 {
     struct node *root= newnode(16);
     
-    root->left=newnode(12);
-    root->left->left=newnode(9);
-    root->left->right=newnode(3);
+    if(12<root->data)
+    {
+    	root->left=newnode(12);
+
+    }
+    else
+    {
+    	root->right=newnode(12);
+    }
     
-    root->left->right->left=newnode(2);
     
-    root->right=newnode(19);
-    root->right->left=newnode(18);
-    root->right->right=newnode(11);
+    if(7<root->left->data)
+    {
+    	root->left->left=newnode(7);
+
+    }
+    else
+    {
+    	root->left->right=newnode(7);
+    }
     
-    root->right->left->right=newnode(5);
+    
+    if(14<root->left->data)
+    {
+    	root->left->left=newnode(14);
+
+    }
+    else
+    {
+    	root->left->right=newnode(14);
+    }
+    
+    
+    if(25<root->data)
+    {
+    	root->left=newnode(25);
+
+    }
+    else
+    {
+    	root->right=newnode(25);
+    }
+    
+    
     
     printf("Pre-order=");
     preorder(root);
